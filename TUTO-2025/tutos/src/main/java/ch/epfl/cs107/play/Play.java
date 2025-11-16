@@ -1,10 +1,12 @@
 package ch.epfl.cs107.play;
 
+import ch.epfl.cs107.play.areagame.AreaGame;
 import ch.epfl.cs107.play.engine.Game;
 import ch.epfl.cs107.play.io.ResourcePath;
 import ch.epfl.cs107.play.io.DefaultFileSystem;
 import ch.epfl.cs107.play.io.FileSystem;
 import ch.epfl.cs107.play.io.ResourceFileSystem;
+import ch.epfl.cs107.play.tuto1.Tuto1;
 import ch.epfl.cs107.play.window.Window;
 import ch.epfl.cs107.play.window.swing.SwingWindow;
 
@@ -27,8 +29,12 @@ public class Play {
 		// Define cascading file system
 		final FileSystem fileSystem = new ResourceFileSystem(DefaultFileSystem.INSTANCE);
 
+        //final Game game = new Tuto1();
+        final AreaGame game = new Tuto1();
+
         // Create a demo game and initialize corresponding texts
-        final Game game = null; // new Tuto1();
+        //final Game game = null; // new Tuto1();
+
 
         // Use Swing display
 		final Window window = new SwingWindow(game.getTitle(), fileSystem, WINDOW_WIDTH, WINDOW_HEIGHT);

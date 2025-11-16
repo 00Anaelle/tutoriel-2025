@@ -179,7 +179,7 @@ public final class SwingWindow extends Node implements Window {
 		canvas.setFocusable(true);
 		canvas.setFocusTraversalKeysEnabled(false);
 		canvas.setIgnoreRepaint(true);
-		canvas.setBackground(Color.getHSBColor(0.29f,.55f,0.35f));
+		canvas.setBackground(Color.getHSBColor(0.25f,.70f,0.50f));
 
 		// Create Swing frame
 		frame = new JFrame(title);
