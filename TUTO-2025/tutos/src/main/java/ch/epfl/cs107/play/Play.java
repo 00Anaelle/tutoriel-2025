@@ -30,7 +30,8 @@ public class Play {
 		final FileSystem fileSystem = new ResourceFileSystem(DefaultFileSystem.INSTANCE);
 
         //final Game game = new Tuto1();
-        final AreaGame game = new Tuto1();
+        //final AreaGame game = new Tuto1();
+        final AreaGame game = new Tuto2();
 
         // Create a demo game and initialize corresponding texts
         //final Game game = null; // new Tuto1();

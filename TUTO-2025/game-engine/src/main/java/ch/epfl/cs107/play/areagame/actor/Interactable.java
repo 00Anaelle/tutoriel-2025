@@ -25,6 +25,7 @@ public interface Interactable {
      * (how many Interactable which don't takeCellSpace can also be in the same cell)
      * @return (boolean)
      */
+    // rend inaccessible la cellule où l'Interactable se trouve à un auteur acteur
     boolean takeCellSpace();
 
 

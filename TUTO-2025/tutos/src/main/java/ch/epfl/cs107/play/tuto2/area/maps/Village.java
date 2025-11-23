@@ -5,8 +5,9 @@ import ch.epfl.cs107.play.engine.actor.Foreground;
 import ch.epfl.cs107.play.math.Vector;
 import ch.epfl.cs107.play.tuto1.actor.SimpleGhost;
 import ch.epfl.cs107.play.tuto1.area.SimpleArea;
+import ch.epfl.cs107.play.tuto2.area.Tuto2Area;
 
-public class Village extends SimpleArea {
+public class Village extends Tuto2Area {
 
     @Override
     protected void createArea() {

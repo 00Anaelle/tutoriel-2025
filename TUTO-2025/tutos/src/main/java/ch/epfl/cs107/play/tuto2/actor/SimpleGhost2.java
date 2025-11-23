@@ -47,8 +47,6 @@ public class SimpleGhost2 extends Entity {
     public void draw(Canvas canvas){
         sprite.draw(canvas);
         hpText.draw(canvas);
-
-
     }
     public  void update(float deltaTime){
         hp = Math.max(0f, hp-deltaTime);
