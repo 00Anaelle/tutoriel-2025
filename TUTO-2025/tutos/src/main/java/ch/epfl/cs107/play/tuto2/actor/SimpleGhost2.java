@@ -1,4 +1,4 @@
-package ch.epfl.cs107.play.tuto1.actor;
+package ch.epfl.cs107.play.tuto2.actor;
 
 import ch.epfl.cs107.play.engine.actor.Entity;
 import ch.epfl.cs107.play.engine.actor.Sprite;
@@ -8,21 +8,18 @@ import ch.epfl.cs107.play.window.Canvas;
 
 import java.awt.*;
 
-
-public class SimpleGhost extends Entity {
-
+public class SimpleGhost2 extends Entity {
     //Représentation graphique du fantôme
     private Sprite sprite;
     //pas besoin de redéclarer position et nom d'image, la classe mère Entity s'en charge.
 
     private float hp;
     private TextGraphics hpText;
-    private float hpVal= 10;
 
-    public SimpleGhost (Vector position, String spriteName){
+    public SimpleGhost2(Vector position, String spriteName){
         super(position);
         this.sprite=new Sprite(spriteName, 1f, 1f, this);
-        this.hp=hpVal;
+        this.hp=3;
         this.hpText=new TextGraphics(Integer.toString((int)hp), 0.4f, Color.BLUE);
         //lie le texte au fantôme
         hpText.setParent(this);
@@ -42,7 +39,7 @@ public class SimpleGhost extends Entity {
     }
 
     public  void strengthen(){
-        hp=hpVal;
+        hp=3;
         hpText.setText(Integer.toString((int) hp));
     }
 
@@ -62,23 +59,24 @@ public class SimpleGhost extends Entity {
         super.update(deltaTime);
 
     }
-    private float speedVal = 1F;
+
     public void moveUp (){
-        setCurrentPosition(getPosition().add(0f, speedVal));
+        setCurrentPosition(getPosition().add(0f, 0.05F));
     }
     public void moveDown (){
-        setCurrentPosition(getPosition().add(0f, -speedVal));
+        setCurrentPosition(getPosition().add(0f, -0.05F));
     }
     public void moveLeft (){
-        setCurrentPosition(getPosition().add(-speedVal, 0F));
+        setCurrentPosition(getPosition().add(-0.05f, 0F));
     }
     public void moveRight (){
-        setCurrentPosition(getPosition().add(speedVal, 0F));
+        setCurrentPosition(getPosition().add(0.05f, 0F));
     }
 
     public void respawn(Vector position){
         setCurrentPosition(position);
     }
+
 
 
 }

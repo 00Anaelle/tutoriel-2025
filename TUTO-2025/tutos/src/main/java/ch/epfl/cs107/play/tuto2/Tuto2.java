@@ -1,20 +1,21 @@
-package ch.epfl.cs107.play.tuto1;
+package ch.epfl.cs107.play.tuto2;
 
 import ch.epfl.cs107.play.areagame.AreaGame;
 import ch.epfl.cs107.play.io.FileSystem;
 import ch.epfl.cs107.play.math.Vector;
-import ch.epfl.cs107.play.tuto1.actor.SimpleGhost;
 import ch.epfl.cs107.play.tuto1.area.maps.Ferme;
 import ch.epfl.cs107.play.tuto1.area.maps.Village;
+import ch.epfl.cs107.play.tuto2.actor.SimpleGhost2;
 import ch.epfl.cs107.play.window.Keyboard;
 import ch.epfl.cs107.play.window.Window;
 
-public class Tuto1 extends AreaGame {
-    private SimpleGhost player;
+public class Tuto2 extends AreaGame {
+    private SimpleGhost2 player;
 
     @Override
     public String getTitle() {
-        return "Tuto1";
+
+        return "Tuto2";
     }
 
     private void createAreas(){
@@ -65,7 +66,7 @@ public class Tuto1 extends AreaGame {
             createAreas();
             var area = setCurrentArea("zelda/Village", true);
             //Area area = getCurrentArea();
-            player = new SimpleGhost(new Vector(18,7), "ghost.1");
+            player = new SimpleGhost2(new Vector(18,7), "ghost.1");
             area.registerActor(player);
             area.setViewCandidate(player);
 

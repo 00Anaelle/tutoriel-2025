@@ -1,12 +1,15 @@
 package ch.epfl.cs107.play.tuto1.area.maps;
 
+import ch.epfl.cs107.play.engine.actor.Background;
+import ch.epfl.cs107.play.engine.actor.Foreground;
 import ch.epfl.cs107.play.tuto1.area.SimpleArea;
 
 public class Ferme extends SimpleArea {
 
     @Override
     protected void createArea() {
-        super.createArea();
+        registerActor(new Background(this));
+        registerActor(new Foreground(this));
     }
 
     @Override

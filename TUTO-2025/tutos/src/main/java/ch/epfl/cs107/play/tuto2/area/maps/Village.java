@@ -1,4 +1,4 @@
-package ch.epfl.cs107.play.tuto1.area.maps;
+package ch.epfl.cs107.play.tuto2.area.maps;
 
 import ch.epfl.cs107.play.engine.actor.Background;
 import ch.epfl.cs107.play.engine.actor.Foreground;
